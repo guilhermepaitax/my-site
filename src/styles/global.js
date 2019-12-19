@@ -23,6 +23,12 @@ export default createGlobalStyle`
     font-family: 'Nunito', Arial, Helvetica, sans-serif;
   }
 
+  #root {
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+  }
+
   button {
     cursor: pointer;
   }
