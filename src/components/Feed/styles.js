@@ -1,19 +1,52 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
-import PlanetMountains from '~/assets/computer.png';
+const zoom = keyframes`
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  80% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+`;
+
+const fade = keyframes`
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+`;
 
 export const Container = styled.div`
   width: 40%;
   height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
   background: #ffffff;
   border-right: 1px solid #caccdc1c;
   padding: 60px 50px;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const About = styled.section`
   h1 {
     color: #202020;
     font-size: 34px;
+    animation: ${fade} 0.6s ease;
   }
 `;
 
@@ -28,6 +61,7 @@ export const Title = styled.div`
     font-weight: 400;
     max-width: 500px;
     line-height: 1.4;
+    animation: ${fade} 0.6s ease;
 
     a {
       color: #8c91ff;
@@ -49,22 +83,70 @@ export const Index = styled.div`
   font-weight: 500;
   font-size: 18px;
   margin-right: 20px;
+  animation: ${zoom} 0.6s ease;
 `;
 
-export const ImageCard = styled.div`
-  margin-top: 50px;
-  background: linear-gradient(to right bottom, #ceceda00, #292929),
-    url(${PlanetMountains});
-  background-size: cover;
-  background-position: center;
+export const ViewEdit = styled.div`
+  margin-top: 60px;
   width: 100%;
-  height: 220px;
-  border-radius: 8px;
-  transition: all 0.4s ease-out;
+
+  > div {
+    width: 73%;
+    height: 50px;
+    background: #fff;
+    box-shadow: 2px 5px 10px 0px rgba(93, 96, 146, 0.05);
+    border-radius: 8px;
+    animation: ${zoom} 0.6s ease;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+
+    p {
+      margin-left: auto;
+    }
+  }
+`;
+
+export const Color = styled.div`
+  width: 32px;
+  height: 32px;
+  background: ${props => props.color};
+  border-radius: 6px;
+  margin-right: 10px;
   cursor: pointer;
+  transition: all 0.2s ease;
 
   &:hover {
-    transform: scale(1.02);
-    box-shadow: 0 10px 15px 0 rgba(32, 33, 36, 0.28);
+    transform: scale(1.08);
+  }
+`;
+
+export const AboutText = styled.article`
+  margin-top: 60px;
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2.3;
+    animation: ${fade} 0.6s ease;
+    color: #a6a8b9;
+    text-align: justify;
+  }
+`;
+
+export const DashedBox = styled.div`
+  margin-top: 60px;
+  width: 100%;
+  padding: 30px 30px 20px 30px;
+  border: 1.5px dashed #dee0f3;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+
+  span {
+    background: #e7e9ed;
+    padding: 6px 12px;
+    border-radius: 14px;
+    margin: 0 10px 10px 0;
   }
 `;

@@ -42,6 +42,7 @@ export const Container = styled.div`
   width: 30%;
   height: 100%;
   background: linear-gradient(to bottom, #eff1ff, #f2f1f9);
+  background: linear-gradient(to bottom left, #f0f5fe, #ffffff 40%);
   display: flex;
   align-items: flex-end;
   flex-direction: column;
