@@ -17,7 +17,16 @@ export default function Home() {
       <Menu />
       <InitialSection>
         <BlockGradient />
-        <LeftContent />
+        <LeftContent>
+          <div>
+            <h2>
+              <span>Guilherme Paitax</span>
+              <p>
+                Desenvolvedor de <strong>Sistemas</strong>
+              </p>
+            </h2>
+          </div>
+        </LeftContent>
         <RightContent>
           <img src={Office} alt="Ilustração no escritório" />
         </RightContent>
