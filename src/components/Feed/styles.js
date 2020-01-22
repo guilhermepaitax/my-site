@@ -34,6 +34,7 @@ export const Container = styled.div`
   overflow-y: scroll;
   background: #ffffff;
   border-right: 1px solid #caccdc1c;
+  border-left: 1px solid #caccdc1c;
   padding: 60px 50px;
   -ms-overflow-style: none;
 
@@ -121,6 +122,26 @@ export const Color = styled.div`
   }
 `;
 
+export const SocialLinks = styled.div`
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  a {
+    color: #8492a6;
+    transition: all 0.2s ease;
+
+    svg {
+      margin: 0 15px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+`;
+
 export const AboutText = styled.article`
   margin-top: 60px;
 
@@ -132,6 +153,38 @@ export const AboutText = styled.article`
     color: #a6a8b9;
     text-align: justify;
   }
+`;
+
+export const AcademicEducation = styled.div`
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
+export const AcademicTitle = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+  }
+`;
+
+export const AcademicInfo = styled.div`
+  margin-left: 16px;
+  border-left: 1px solid #dee0f3;
+  padding: 20px;
 `;
 
 export const DashedBox = styled.div`
