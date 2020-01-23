@@ -19,6 +19,7 @@ import {
   AcademicTitle,
   AcademicInfo,
   DashedBox,
+  Knowledge,
 } from './styles';
 
 export default function Feed() {
@@ -106,7 +107,7 @@ export default function Feed() {
             </AcademicTitle>
             <AcademicInfo>
               <p>
-                Curso Técnico em Informática do SENAI com foco em
+                Curso Técnico de Informática do SENAI com foco em
                 desenvolvimento de sistemas.
               </p>
             </AcademicInfo>
@@ -121,8 +122,11 @@ export default function Feed() {
             </AcademicInfo>
           </div>
         </AcademicEducation>
+      </About>
+      <Knowledge>
+        <h1>Conhecimentos</h1>
         <Title>
-          <Index>3</Index>
+          <Index>1</Index>
           <p>Habilidades gerais.</p>
         </Title>
         <DashedBox>
@@ -133,6 +137,7 @@ export default function Feed() {
           <span>CSS</span>
           <span>JavaScript</span>
           <span>C#</span>
+          <span>MVC</span>
           <span>Express</span>
           <span>SQL</span>
           <span>ESLint</span>
@@ -142,8 +147,9 @@ export default function Feed() {
           <span>AJAX</span>
           <span>jQuery</span>
           <span>RESTful</span>
+          <span>NPM</span>
         </DashedBox>
-      </About>
+      </Knowledge>
     </Container>
   );
 }

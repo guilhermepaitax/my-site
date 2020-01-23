@@ -203,3 +203,12 @@ export const DashedBox = styled.div`
     margin: 0 10px 10px 0;
   }
 `;
+
+export const Knowledge = styled.div`
+  h1 {
+    margin-top: 70px;
+    color: #202020;
+    font-size: 34px;
+    animation: ${fade} 0.6s ease;
+  }
+`;

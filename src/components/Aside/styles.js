@@ -25,6 +25,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 `;
 
 export const ViewEdit = styled.div`
@@ -51,6 +52,32 @@ export const Color = styled.div`
   margin-right: 10px;
   cursor: pointer;
   transition: all 0.2s ease;
+
+  &:hover {
+    transform: scale(1.08);
+  }
+`;
+
+export const WhatsApp = styled.div`
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: white;
+  bottom: 30px;
+  right: 30px;
+  box-shadow: 2px 5px 10px 0px rgba(93, 96, 146, 0.09);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  animation: ${zoom} 0.6s ease;
+
+  img {
+    width: 38px;
+    user-select: none;
+  }
 
   &:hover {
     transform: scale(1.08);
