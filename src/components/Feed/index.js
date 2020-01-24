@@ -89,15 +89,20 @@ export default function Feed() {
             <AcademicTitle>
               <FaUniversity size={32} />
               <div>
-                <strong>Centro Universitario Unibrasil</strong>
+                <strong>UniBrasil Centro Universitário</strong>
               </div>
             </AcademicTitle>
             <AcademicInfo>
-              <p>Bacharelado em Sistemas de Informação.</p>
               <p>
-                Tecnologia em Tecnologia da Informação/Sistemas da Informação.
+                <strong>Bacharelado em Sistemas de Informação.</strong>
+                <br />O curso de Sistemas de Informação tem por objetivo geral a
+                formação básica sólida em Ciência da Computação, Matemática e
+                Sistemas de Informação, enfatizando aspectos científicos,
+                técnicos, humanos e sociais, para atuarem em gestão,
+                desenvolvimento, uso e avaliação de tecnologias de informação
+                aplicadas nas organizações.
               </p>
-              <p>2018/2021.</p>
+              <span>2018 até 2021</span>
             </AcademicInfo>
             <AcademicTitle>
               <FaSchool size={32} />
@@ -107,9 +112,12 @@ export default function Feed() {
             </AcademicTitle>
             <AcademicInfo>
               <p>
-                Curso Técnico de Informática do SENAI com foco em
-                desenvolvimento de sistemas.
+                <strong>Curso Técnico de Informática.</strong>
+                <br />
+                Curso Técnico em Informática do SENAI com foco em
+                desenvolvimento de sistemas web e desktop.
               </p>
+              <span>2016 até 2017</span>
             </AcademicInfo>
             <AcademicTitle>
               <FaGraduationCap size={32} />
@@ -118,7 +126,16 @@ export default function Feed() {
               </div>
             </AcademicTitle>
             <AcademicInfo>
-              <p>Go Stack.</p>
+              <p>
+                <strong>Go Stack.</strong>
+                <br />O GoStack é um treinamento online, prático e intensivo, no
+                formato de bootcamp. No GoStack o aluno vai a fundo nas
+                tecnologias NodeJS, ReactJS e React Native, e todo o ecossistema
+                ao redor dessas ferramentas, do zero ao deploy. Incluindo testes
+                automatizados, integração contínua, publicação nas stores, e
+                todas as bibliotecas e frameworks importantes.
+              </p>
+              <span>2019 até 2020</span>
             </AcademicInfo>
           </div>
         </AcademicEducation>

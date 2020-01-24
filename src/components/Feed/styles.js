@@ -185,6 +185,23 @@ export const AcademicInfo = styled.div`
   margin-left: 16px;
   border-left: 1px solid #dee0f3;
   padding: 20px;
+
+  p {
+    line-height: 1.5;
+    text-align: justify;
+
+    max-width: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  span {
+    margin-top: 15px;
+    display: block;
+  }
 `;
 
 export const DashedBox = styled.div`
