@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   FaGithub,
   FaLinkedinIn,
@@ -21,14 +21,17 @@ import {
   DashedBox,
   Knowledge,
 } from './styles';
+import ThemeContext from '../ThemeContext';
 
 export default function Feed() {
+  const { themeActive } = useContext(ThemeContext);
+
   return (
     <Container>
       <About>
         <h1>Introdução</h1>
         <Title>
-          <Index>1</Index>
+          <Index themeActive={themeActive}>1</Index>
           <p>
             Quem é Guilherme Ribeiro Paitax.
             {/* <a
@@ -81,7 +84,7 @@ export default function Feed() {
           </p>
         </AboutText>
         <Title>
-          <Index>2</Index>
+          <Index themeActive={themeActive}>2</Index>
           <p>Formação acadêmica.</p>
         </Title>
         <AcademicEducation>
@@ -143,7 +146,7 @@ export default function Feed() {
       <Knowledge>
         <h1>Conhecimentos</h1>
         <Title>
-          <Index>1</Index>
+          <Index themeActive={themeActive}>1</Index>
           <p>Habilidades gerais.</p>
         </Title>
         <DashedBox>

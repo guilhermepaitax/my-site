@@ -2,6 +2,14 @@ import styled, { keyframes } from 'styled-components';
 
 import Avatar from '~/assets/avatar.jpg';
 
+const changeTheme = (active, theme) => {
+  if (active === 'secundary')
+    return `linear-gradient(to bottom left, ${theme.bg.secundary}, #ffffff 40%)`;
+  if (active === 'dark')
+    return `linear-gradient(to bottom left, ${theme.bg.dark}, #ffffff 40%)`;
+  return `linear-gradient(to bottom left, ${theme.bg.primary}, #ffffff 40%)`;
+};
+
 const zoom = keyframes`
   from {
     transform: scale(0);
@@ -41,8 +49,9 @@ const slideBottom = keyframes`
 export const Container = styled.div`
   width: 30%;
   height: 100%;
-  background: linear-gradient(to bottom, #eff1ff, #f2f1f9);
+
   background: linear-gradient(to bottom left, #f0f5fe, #ffffff 40%);
+  background: ${props => changeTheme(props.themeActive, props.theme)};
   display: flex;
   align-items: flex-end;
   flex-direction: column;
@@ -88,7 +97,15 @@ export const LinkMenu = styled.li`
   display: flex;
   align-items: center;
   margin-bottom: 25px;
-  color: ${props => (props.selected ? '#5157F1' : '#c6c8dc')};
+  color: ${props => {
+    if (props.selected) {
+      if (props.themeActive === 'secundary')
+        return props.theme.colors.secundary;
+      if (props.themeActive === 'dark') return props.theme.colors.dark;
+      return props.theme.colors.primary;
+    }
+    return '#c6c8dc';
+  }};
   cursor: pointer;
   transition: all 0.2s ease-out;
 
@@ -99,6 +116,14 @@ export const LinkMenu = styled.li`
   }
 
   &:hover {
-    color: ${props => (props.selected ? '#5157F1' : '#9da2af')};
+    color: ${props => {
+      if (props.selected) {
+        if (props.themeActive === 'secundary')
+          return props.theme.colors.secundary;
+        if (props.themeActive === 'dark') return props.theme.colors.dark;
+        return props.theme.colors.primary;
+      }
+      return '#9da2af';
+    }};
   }
 `;

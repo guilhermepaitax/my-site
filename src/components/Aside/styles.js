@@ -17,10 +17,19 @@ const zoom = keyframes`
   }
 `;
 
+const changeTheme = (active, theme) => {
+  if (active === 'secundary')
+    return `linear-gradient(to bottom right, ${theme.bg.secundary}, #ffffff 20%)`;
+  if (active === 'dark')
+    return `linear-gradient(to bottom right, ${theme.bg.dark}, #ffffff 20%)`;
+  return `linear-gradient(to bottom right, ${theme.bg.primary}, #ffffff 20%)`;
+};
+
 export const Container = styled.div`
   width: 30%;
   height: 100%;
   background: linear-gradient(to bottom right, #f0f5fe, #ffffff 20%);
+  background: ${props => changeTheme(props.themeActive, props.theme)};
   padding: 60px 40px;
   display: flex;
   flex-direction: column;

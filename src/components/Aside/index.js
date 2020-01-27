@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import { Container, ViewEdit, Color, WhatsApp } from './styles';
 
+import ThemeContext from '../ThemeContext';
 import WhatsAppLogo from '~/assets/whatsapp.svg';
 
 export default function Aside() {
+  const { themeActive, handleChangeTheme } = useContext(ThemeContext);
+
   return (
-    <Container>
+    <Container themeActive={themeActive}>
       <ViewEdit>
-        <Color color="#3c404a" />
-        <Color color="#ffac4a" />
-        <Color color="#525afb" />
+        <Color onClick={() => handleChangeTheme('dark')} color="#3c404a" />
+        <Color onClick={() => handleChangeTheme('secundary')} color="#ffac4a" />
+        <Color onClick={() => handleChangeTheme('primary')} color="#525afb" />
         <p>Selecione a cor de destaque desejada!</p>
       </ViewEdit>
       <a

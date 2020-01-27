@@ -79,12 +79,17 @@ export const Index = styled.div`
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #525afb;
+  background: ${props => {
+    if (props.themeActive === 'secundary') return props.theme.colors.secundary;
+    if (props.themeActive === 'dark') return props.theme.colors.dark;
+    return props.theme.colors.primary;
+  }};
   color: white;
   font-weight: 500;
   font-size: 18px;
   margin-right: 20px;
   animation: ${zoom} 0.6s ease;
+  transition: background 0.2s ease;
 `;
 
 export const ViewEdit = styled.div`
