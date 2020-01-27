@@ -28,7 +28,8 @@ export default function Feed() {
   const { themeActive } = useContext(ThemeContext);
   const [techs, setTechs] = useState({
     name: '💻 React JS',
-    description: 'Uma biblioteca JavaScript para criar interfaces de usuário.',
+    description:
+      'React faz com que a criação de UIs interativas seja uma tarefa fácil. O React atualiza e renderizar de forma eficiente apenas os componentes necessários na medida em que os dados mudam.',
     link: 'https://reactjs.org/',
   });
 
@@ -37,7 +38,7 @@ export default function Feed() {
       {
         name: '💻 React JS',
         description:
-          'Uma biblioteca JavaScript para criar interfaces de usuário.',
+          'React faz com que a criação de UIs interativas seja uma tarefa fácil. O React atualiza e renderizar de forma eficiente apenas os componentes necessários na medida em que os dados mudam.',
         link: 'https://reactjs.org/',
       },
       {
@@ -213,7 +214,7 @@ export default function Feed() {
           </div>
           <a
             href={techs.link}
-            title="Link"
+            title={`Link ${techs.name}`}
             target="_blank"
             rel="noopener noreferrer"
           >
