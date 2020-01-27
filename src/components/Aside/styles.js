@@ -28,7 +28,6 @@ const changeTheme = (active, theme) => {
 export const Container = styled.div`
   width: 30%;
   height: 100%;
-  background: linear-gradient(to bottom right, #f0f5fe, #ffffff 20%);
   background: ${props => changeTheme(props.themeActive, props.theme)};
   padding: 60px 40px;
   display: flex;

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import {
   FaGithub,
   FaLinkedinIn,
@@ -20,11 +20,49 @@ import {
   AcademicInfo,
   DashedBox,
   Knowledge,
+  CardTechs,
 } from './styles';
 import ThemeContext from '../ThemeContext';
 
 export default function Feed() {
   const { themeActive } = useContext(ThemeContext);
+  const [techs, setTechs] = useState({
+    name: '💻 React JS',
+    description: 'Uma biblioteca JavaScript para criar interfaces de usuário.',
+    link: 'https://reactjs.org/',
+  });
+
+  useEffect(() => {
+    const techsArray = [
+      {
+        name: '💻 React JS',
+        description:
+          'Uma biblioteca JavaScript para criar interfaces de usuário.',
+        link: 'https://reactjs.org/',
+      },
+      {
+        name: '🚀 Node JS',
+        description:
+          'Node.js é um interpretador de JavaScript assíncrono com código aberto ' +
+          'orientado a eventos, focado em migrar a programação do Javascript do cliente para os servidores.',
+        link: 'https://nodejs.org/en/',
+      },
+      {
+        name: '📱 React Native',
+        description:
+          'React Native é uma biblioteca Javascript criada pelo Facebook. ' +
+          'É usada para desenvolver aplicativos para os sistemas Android e IOS de forma nativa.',
+        link: 'https://facebook.github.io/react-native/',
+      },
+    ];
+
+    let i = 0;
+    setInterval(() => {
+      setTechs(techsArray[i]);
+      if (i === 2) i = 0;
+      else i += 1;
+    }, 6000);
+  }, []);
 
   return (
     <Container>
@@ -32,16 +70,7 @@ export default function Feed() {
         <h1>Introdução</h1>
         <Title>
           <Index themeActive={themeActive}>1</Index>
-          <p>
-            Quem é Guilherme Ribeiro Paitax.
-            {/* <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.google.com.br/maps/place/Curitiba+-+PR"
-            >
-              Curitiba
-            </a> */}
-          </p>
+          <p>Quem é Guilherme Ribeiro Paitax.</p>
         </Title>
         <SocialLinks>
           <a
@@ -169,6 +198,28 @@ export default function Feed() {
           <span>RESTful</span>
           <span>NPM</span>
         </DashedBox>
+        <Title>
+          <Index themeActive={themeActive}>2</Index>
+          <p>Principais tecnologias.</p>
+        </Title>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. A magnam
+          illum quidem culpa perferendis alias.
+        </p>
+        <CardTechs style={techs.style}>
+          <div>
+            <h2>{techs.name}</h2>
+            <p>{techs.description}</p>
+          </div>
+          <a
+            href={techs.link}
+            title="Link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Saiba Mais
+          </a>
+        </CardTechs>
       </Knowledge>
     </Container>
   );
