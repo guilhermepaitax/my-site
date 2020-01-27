@@ -1,40 +1,37 @@
-import React from 'react';
-import { FaAngleDown } from 'react-icons/fa';
+import React, { useContext } from 'react';
+import { MdGesture, MdExtension, MdRowing, MdFolder } from 'react-icons/md';
 
-import { Container, Content, NavLink } from './styles';
+import { Container, LinkMenu } from './styles';
 
-import BrasilIcon from '~/assets/icon-brasil-96.png';
+import ThemeContext from '../ThemeContext';
 
 export default function Menu() {
+  const { themeActive } = useContext(ThemeContext);
+
   return (
-    <Container>
-      <Content>
-        <ul>
-          <li>
-            <NavLink type="button">
-              <span>
-                Sobre <FaAngleDown size={15} />
-              </span>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink type="button">
-              <span>
-                Projetos <FaAngleDown size={15} />
-              </span>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink type="button">Contato</NavLink>
-          </li>
-        </ul>
-        <div>
-          <button type="button">
-            <img src={BrasilIcon} alt="Bandeira do Brasil" />
-            PT-BR
-          </button>
-        </div>
-      </Content>
+    <Container themeActive={themeActive}>
+      <div>
+        <div />
+        <h2>Guilherme Paitax</h2>
+      </div>
+      <ul>
+        <LinkMenu themeActive={themeActive} selected>
+          <MdGesture size={24} />
+          <span>Sobre</span>
+        </LinkMenu>
+        <LinkMenu themeActive={themeActive}>
+          <MdExtension size={24} />
+          <span>Conhecimentos</span>
+        </LinkMenu>
+        <LinkMenu themeActive={themeActive}>
+          <MdRowing size={24} />
+          <span>Experiências</span>
+        </LinkMenu>
+        <LinkMenu themeActive={themeActive}>
+          <MdFolder size={24} />
+          <span>Projetos</span>
+        </LinkMenu>
+      </ul>
     </Container>
   );
 }

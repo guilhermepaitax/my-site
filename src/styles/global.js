@@ -2,8 +2,6 @@ import { createGlobalStyle } from 'styled-components';
 import 'circular-std';
 
 export default createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700&display=swap');
-  @import url('https://rsms.me/inter/inter.css');
 
   * {
     margin: 0;
@@ -13,8 +11,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background: #F8F9FD;
-    background: linear-gradient(to bottom, #F8F9FD 50%, #F8FAFD);
+    background: #FFFFFF;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -22,12 +19,13 @@ export default createGlobalStyle`
   body, input, button {
     font-size: 14px;
     color: #8492A6;
-    font-family: 'CircularStd', 'Nunito', Arial, Helvetica, sans-serif;
+    font-family: CircularStd, Arial, Helvetica, sans-serif;
   }
 
-  #root {
-    width: 100vw;
-    height: 100vh;
+  #root, body, html {
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
   }
 
   button {
