@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect, useRef } from 'react';
 import {
   FaGithub,
   FaLinkedinIn,
@@ -23,15 +23,20 @@ import {
   CardTechs,
 } from './styles';
 import ThemeContext from '../ThemeContext';
+import SectionContext from '../SectionContext';
 
 export default function Feed() {
   const { themeActive } = useContext(ThemeContext);
+  const { handleAddSections } = useContext(SectionContext);
   const [techs, setTechs] = useState({
     name: '💻 React JS',
     description:
       'React faz com que a criação de UIs interativas seja uma tarefa fácil. O React atualiza e renderizar de forma eficiente apenas os componentes necessários na medida em que os dados mudam.',
     link: 'https://reactjs.org/',
   });
+
+  const aboutRef = useRef(null);
+  const knowledgeRef = useRef(null);
 
   useEffect(() => {
     const techsArray = [
@@ -65,9 +70,18 @@ export default function Feed() {
     }, 6000);
   }, []);
 
+  useEffect(() => {
+    if (aboutRef.current) {
+      handleAddSections('about', aboutRef.current);
+    }
+    if (knowledgeRef.current) {
+      handleAddSections('knowledge', knowledgeRef.current);
+    }
+  }, [handleAddSections]);
+
   return (
     <Container>
-      <About>
+      <About ref={aboutRef}>
         <h1>Introdução</h1>
         <Title>
           <Index themeActive={themeActive}>1</Index>
@@ -173,7 +187,7 @@ export default function Feed() {
           </div>
         </AcademicEducation>
       </About>
-      <Knowledge>
+      <Knowledge ref={knowledgeRef}>
         <h1>Conhecimentos</h1>
         <Title>
           <Index themeActive={themeActive}>1</Index>
