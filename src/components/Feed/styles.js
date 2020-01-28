@@ -10,6 +10,7 @@ export const Container = styled.div`
   border-left: 1px solid #caccdc1c;
   padding: 0 50px 60px 50px;
   -ms-overflow-style: none;
+  scrollbar-width: none;
 
   &::-webkit-scrollbar {
     display: none;
