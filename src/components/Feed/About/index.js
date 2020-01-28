@@ -33,7 +33,7 @@ export default function About() {
   }, [handleAddSections]);
 
   return (
-    <Container ref={sectionRef}>
+    <Container ref={sectionRef} name="about">
       <h1>Introdução</h1>
       <Title>
         <Index themeActive={themeActive}>1</Index>

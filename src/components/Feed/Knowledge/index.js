@@ -55,7 +55,7 @@ export default function Knowledge() {
   }, [handleAddSections]);
 
   return (
-    <Container ref={sectionRef}>
+    <Container ref={sectionRef} name="knowledge">
       <h1>Conhecimentos</h1>
       <Title>
         <Index themeActive={themeActive}>1</Index>
