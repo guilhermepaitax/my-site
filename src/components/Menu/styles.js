@@ -1,5 +1,5 @@
-import styled, { keyframes } from 'styled-components';
-
+import styled from 'styled-components';
+import { zoomUp, slideRight, slideBottom } from '~/styles/animations';
 import Avatar from '~/assets/avatar.jpg';
 
 const changeTheme = (active, theme) => {
@@ -9,42 +9,6 @@ const changeTheme = (active, theme) => {
     return `linear-gradient(to bottom left, ${theme.bg.dark}, #ffffff 40%)`;
   return `linear-gradient(to bottom left, ${theme.bg.primary}, #ffffff 40%)`;
 };
-
-const zoom = keyframes`
-  from {
-    transform: scale(0);
-    opacity: 0;
-  }
-
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-`;
-
-const slideRight = keyframes`
-  from {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-`;
-
-const slideBottom = keyframes`
-  from {
-    transform: translateY(200px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-`;
 
 export const Container = styled.div`
   width: 30%;
@@ -66,7 +30,7 @@ export const Container = styled.div`
       height: 35px;
       border-radius: 50%;
       background: #bac4d8;
-      animation: ${zoom} 0.6s ease;
+      animation: ${zoomUp} 0.6s ease;
       background-image: url(${Avatar});
       background-size: cover;
       background-position: center;

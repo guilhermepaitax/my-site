@@ -40,7 +40,10 @@ export default function Menu() {
           <MdExtension size={24} />
           <span>Conhecimentos</span>
         </LinkMenu>
-        <LinkMenu themeActive={themeActive}>
+        <LinkMenu
+          onClick={() => handleGoToSection('experiences')}
+          themeActive={themeActive}
+        >
           <MdRowing size={24} />
           <span>Experiências</span>
         </LinkMenu>
