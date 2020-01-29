@@ -82,10 +82,14 @@ export const AcademicInfo = styled.div`
 
     max-width: 400px;
     overflow: hidden;
-    text-overflow: ellipsis;
+    /* text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: vertical; */
+
+    @media (max-width: 520px) {
+      line-height: 1.8;
+    }
   }
 
   span {

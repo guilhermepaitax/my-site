@@ -95,9 +95,7 @@ export default function About() {
               <br />O curso de Sistemas de Informação tem por objetivo geral a
               formação básica sólida em Ciência da Computação, Matemática e
               Sistemas de Informação, enfatizando aspectos científicos,
-              técnicos, humanos e sociais, para atuarem em gestão,
-              desenvolvimento, uso e avaliação de tecnologias de informação
-              aplicadas nas organizações.
+              técnicos, humanos e sociais.
             </p>
             <span>2018 até 2021</span>
           </AcademicInfo>
@@ -125,12 +123,11 @@ export default function About() {
           <AcademicInfo>
             <p>
               <strong>Go Stack.</strong>
-              <br />O GoStack é um treinamento online, prático e intensivo, no
-              formato de bootcamp. No GoStack o aluno vai a fundo nas
-              tecnologias NodeJS, ReactJS e React Native, e todo o ecossistema
-              ao redor dessas ferramentas, do zero ao deploy. Incluindo testes
-              automatizados, integração contínua, publicação nas stores, e todas
-              as bibliotecas e frameworks importantes.
+              <br />O GoStack é um treinamento, no formato de bootcamp. O curso
+              vai a fundo nas tecnologias NodeJS, ReactJS e React Native, e todo
+              o ecossistema ao redor dessas ferramentas. Incluindo testes
+              automatizados, integração contínua, publicação, e todas as
+              bibliotecas e frameworks importantes.
             </p>
             <span>2019 até 2020</span>
           </AcademicInfo>
