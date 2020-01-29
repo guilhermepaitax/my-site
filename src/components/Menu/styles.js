@@ -21,6 +21,19 @@ export const Container = styled.div`
   flex-direction: column;
   padding: 60px 90px;
 
+  @media (max-width: 1330px) {
+    width: 27%;
+    padding: 60px 50px;
+  }
+
+  @media (max-width: 980px) {
+    padding: 60px 35px;
+  }
+
+  @media (max-width: 910px) {
+    display: none;
+  }
+
   > div {
     display: flex;
     align-items: center;
@@ -34,6 +47,11 @@ export const Container = styled.div`
       background-image: url(${Avatar});
       background-size: cover;
       background-position: center;
+      flex-shrink: 0;
+
+      @media (max-width: 980px) {
+        display: none;
+      }
     }
 
     h2 {
@@ -54,6 +72,10 @@ export const Container = styled.div`
     margin-top: 60px;
     width: 225px;
     animation: ${slideBottom} 0.8s ease;
+
+    @media (max-width: 1160px) {
+      width: 180px;
+    }
   }
 `;
 

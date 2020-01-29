@@ -34,21 +34,49 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   position: relative;
+
+  @media (max-width: 1330px) {
+    width: 27%;
+  }
+
+  @media (max-width: 1060px) {
+    width: 10%;
+  }
+
+  @media (max-width: 910px) {
+    display: none;
+  }
 `;
 
 export const ViewEdit = styled.div`
   width: 100%;
-  height: 50px;
+  min-height: 50px;
   background: #fff;
   box-shadow: 2px 5px 10px 0px rgba(93, 96, 146, 0.05);
   border-radius: 8px;
   animation: ${zoom} 0.6s ease;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   padding: 0 10px;
 
   p {
     margin-left: auto;
+  }
+
+  @media (max-width: 1557px) {
+    padding: 15px 13px;
+    justify-content: center;
+    width: 265px;
+    text-align: center;
+
+    p {
+      margin: 10px 0 0 0;
+    }
+  }
+
+  @media (max-width: 1060px) {
+    display: none;
   }
 `;
 

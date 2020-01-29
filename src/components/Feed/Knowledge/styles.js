@@ -50,6 +50,15 @@ export const CardTechs = styled.div`
   position: relative;
   background: linear-gradient(to right bottom, #282c34, #20232a);
 
+  @media (max-width: 520px) {
+    height: max-content;
+    padding: 36px 25px;
+
+    p {
+      line-height: 1.8;
+    }
+  }
+
   h2 {
     z-index: 2;
     color: #fff;
