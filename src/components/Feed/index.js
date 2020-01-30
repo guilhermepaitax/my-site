@@ -11,8 +11,8 @@ export default function Feed() {
 
   useEffect(() => {
     function handleScroll(e) {
-      if (feedRef.current && e.srcElement !== feedRef.current) {
-        feedRef.current.scrollTop += e.deltaY;
+      if (feedRef.current && !e.path.includes(feedRef.current)) {
+        feedRef.current.scrollTop += e.deltaY / 2;
       }
     }
 
