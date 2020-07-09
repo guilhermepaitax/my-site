@@ -68,26 +68,52 @@ export default function Knowledge() {
         <span>HTML</span>
         <span>CSS</span>
         <span>JavaScript</span>
+        <span>TypeScript</span>
         <span>C#</span>
+        <span>Java</span>
         <span>MVC</span>
+        <span>Data Structure</span>
         <span>Express</span>
         <span>SQL</span>
+        <span>PostgreSQL</span>
+        <span>Microsoft SQL Server</span>
+        <span>MySQL</span>
+        <span>MongoDB</span>
+        <span>Socket.io</span>
         <span>ESLint</span>
         <span>Prettier</span>
         <span>Git</span>
+        <span>GitHub</span>
+        <span>GitLab</span>
         <span>Bootstrap</span>
         <span>AJAX</span>
         <span>jQuery</span>
         <span>RESTful</span>
         <span>NPM</span>
+        <span>Insomnia</span>
+        <span>Babel</span>
+        <span>Webpack</span>
+        <span>Styled Components</span>
+        <span>Axios</span>
+        <span>DDD</span>
+        <span>SOLID</span>
+        <span>Jest</span>
+        <span>JWT</span>
+        <span>Multer</span>
+        <span>Docker</span>
+        <span>VS Code</span>
+        <span>Visual Studio IDE</span>
+        <span>Eclipse IDE</span>
       </DashedBox>
       <Title>
         <Index themeActive={themeActive}>2</Index>
         <p>Principais tecnologias.</p>
       </Title>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. A magnam illum
-        quidem culpa perferendis alias.
+        Tenho maior conhecimento e interesse em tecnologias ligadas ao meio web
+        e mobile, como NodeJS, ReactJS e React Native. O que não significa que
+        não esteja sempre de olho em outras áreas, estou sempre aberto a
+        aprender coisas novas.
       </p>
       <CardTechs style={techs.style}>
         <div>

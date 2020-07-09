@@ -77,7 +77,7 @@ export const AcademicInfo = styled.div`
   padding: 20px;
 
   p {
-    line-height: 1.5;
+    line-height: 1.8;
     text-align: justify;
 
     max-width: 400px;
